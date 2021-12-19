@@ -1,0 +1,81 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid" style="text-align:center">
+        <h1 style="color:aliceblue "> Customer Data</h1>
+        <div class="d-flex">
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Customer</button>
+        </div>
+    </div>
+</nav>
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th scope="col">Customer Id </th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name </th>
+            <th scope="col">Phone No </th>
+            <th scope="col">Address</th>
+            <th scope="col">Loan Amount </th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1288</td>
+            <td>Venkat</td>
+            <td>Pullati</td>
+            <td>8247661271</td>
+            <td>Gara</td>
+            <td>20000</td>
+            <td>
+                <button class="btn btn-info"> Edit </button>
+                <button class="btn btn-danger mx-3"> Delete </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Customer Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="formValue">
+                    <div class="form">
+                        <label for="cid" class="form-label">Customer Id </label>
+                        <input type="number" formcontrolName="cid" class="form-control" id="cid">
+                    </div>
+                    <div class="form">
+                        <label for="FN" class="form-label">First Name </label>
+                        <input type="text" formcontrolName="fName" class="form-control" id="FN">
+                    </div>
+                    <div class="form">
+                        <label for="LN" class="form-label">Last Name </label>
+                        <input type="text" formcontrolName="Lname" class="form-control" id="LN">
+                    </div>
+                    <div class="form">
+                        <label for="PH" class="form-label">Phone No </label>
+                        <input type="number" formcontrolName="Phoneno" class="form-control" id="PH">
+                    </div>
+                    <div class="form">
+                        <label for="Add" class="form-label">Address </label>
+                        <input type="address" formcontrolName="Address" class="form-control" id="Add">
+                    </div>
+                    <div class="form">
+                        <label for="LA" class="form-label">Loan Amount </label>
+                        <input type="number" formcontrolName="LoanAmount" class="form-control" id="LA">
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
